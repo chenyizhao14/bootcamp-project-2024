@@ -1,0 +1,392 @@
+:root {
+  /* variables */
+  --cg-black: rgb(0, 0, 0);
+  --cg-purple: rgb(98, 63, 126);
+  --cg-lpink: rgb(223, 177, 228);
+  --cg-grey: rgb(193, 201, 227);
+  --cg-white: rgb(239, 226, 236);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: var(--cg-grey);
+  position: relative;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+}
+
+/* CSS for navigation */
+
+.navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 7%;
+  z-index: 10;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+
+  background-color: var(--cg-purple);
+  color: var(--cg-white);
+  padding: 0px 0px;
+
+  /* Debug border */
+  /* border: solid red; */
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  right: 30px;
+  list-style: none;
+
+  /* Debug border */
+  /* border: solid blue; */
+}
+
+.navbar a {
+  color: var(--cg-white);
+  font-weight: bold;
+  margin: 0 12px;
+  text-decoration: none;
+  letter-spacing: 2px;
+
+  font-family: monospace;
+}
+
+.navbar a:hover {
+  color: var(--cg-lpink);
+  text-decoration: underline;
+}
+
+.navbar a:active {
+  color: var(--cg-lpink);
+}
+
+.logo a {
+  font-family: Georgia;
+}
+
+.logo a:hover {
+  text-decoration: None;
+}
+
+main {
+  padding: 0 20px 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-title {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  font-family: Georgia;
+}
+
+/* CSS for portfolio grid */
+/* CSS for the Portfolio Grid */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Creates a 2-column grid */
+  gap: 20px; /* Space between grid items */
+  padding: 20px;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.portfolio-image {
+  width: 100%;
+  max-width: 550px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.project-details {
+  background-color: var(--cg-white);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+}
+
+.project-name {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.project-description {
+  font-size: 16px;
+  max-width: 550px;
+  color: var(--cg-purple);
+}
+
+/* CSS for home page */
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border: 5px solid #a389a7;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+.about-image {
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+
+.about-image img {
+  max-width: 300px;
+  border-radius: 3px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+}
+
+.about-text {
+  max-width: 700px;
+  margin: 0 auto;
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.baddie {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  flex-direction: column;
+  background-color: #f8f8f8;
+  border: 5px solid #a389a7;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+.baddie-image {
+  flex-shrink: 0;
+}
+
+.baddie-image img {
+  max-width: 800px;
+  border-radius: 3px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+}
+
+.more-about-me {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border: 5px solid #a389a7;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.more-about-image img {
+  max-width: 300px;
+  border-radius: 3px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+}
+
+.more-about-image {
+  display: flex;
+  justify-content: center; /* Center the images horizontally */
+  align-items: center; /* Align the images vertically */
+  gap: 20px; /* Add space between the images */
+  margin-right: 20px;
+}
+
+.image-item {
+  text-align: center;
+}
+
+.image-item img {
+  width: 150px; /* Set the size of the image */
+  height: 250px; /* Make it a square */
+  border-radius: 95%; /* Make the image circular */
+  object-fit: cover; /* Ensure the image fits within the circle */
+  border: 2px solid #ccc;
+}
+/* CSS for resume page */
+
+.button {
+  background-color: var(--cg-purple);
+  border: none;
+  color: var(--cg-white);
+
+  font-family: monospace;
+
+  padding: 5px 7px;
+  text-align: center;
+
+  border-radius: 2px;
+}
+
+.button:hover {
+  background-color: var(--cg-blue);
+}
+
+.resume.button:hover {
+  background-color: var(--cg-purple);
+  border: none;
+  color: var(--cg-white);
+
+  font-family: monospace;
+
+  padding: 5px 7px;
+  text-align: center;
+
+  border-radius: 2px;
+}
+
+.resume h2 {
+  font-family: Georgia;
+}
+
+.entry-description {
+  text-align: left; /* Ensure text is left-aligned */
+}
+
+.skills-list,
+.course-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  gap: 10px;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  border-bottom: 2px solid var(--cg-purple); /* Add underline effect */
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.course-list-left,
+.course-list-right,
+.skill-list-left,
+.skill-list-right {
+  padding: 0 10px;
+}
+
+.skill-list-left li,
+.skill-list-right li,
+.course-list-left li,
+.course-list-right li {
+  margin-bottom: 5px; /* Reduce margin between list items */
+  list-style: none; /* If you want to remove bullets */
+  line-height: 1.4; /* Adjust line height to make text look tighter */
+}
+
+.entry-list {
+  list-style-type: disc; /* Add disc bullets */
+  margin-left: 20px; /* Indent the list */
+  line-height: 1.6; /* Increase spacing between items */
+}
+
+.section {
+  border-top: 1px solid var(--border-color);
+  width: 70%; /* Adjusted for a better content width */
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+
+.entry {
+  margin-bottom: 15px; /* Add space between entries */
+}
+/* CSS for contact form */
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-family: Georgia;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  resize: none;
+}
+
+/* Add some spacing to the form */
+form {
+  width: 500px;
+  margin: 0 auto;
+}
+
+/* CSS for footer */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cg-purple);
+  color: var(--cg-white);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+
+#blog-container {
+  display: block;
+  padding: 1rem;
+}
+
+.blog-entry img {
+  width: 100%; /* Makes the image take up the full width of its container */
+  max-width: 600px; /* Adjust this value to fit your design */
+  height: auto; /* Maintains the aspect ratio */
+  object-fit: cover; /* Optionally crop the image to cover the container */
+  border-radius: 8px; /* Optional: adds rounded corners */
+  margin: 1rem 0; /* Adds some vertical spacing */
+}
