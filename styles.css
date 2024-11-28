@@ -377,9 +377,21 @@ form {
   height: 2.5rem;
 }
 
+h1,
+.return {
+  text-align: center;
+}
+
 #blog-container {
   display: block;
   padding: 1rem;
+}
+
+.blog-content {
+  max-width: 800px; /* Limit the width of the paragraphs */
+  margin: 0 auto; /* Center the div horizontally */
+  text-align: justify; /* Optional: can change to 'center' or 'left' based on preference */
+  padding: 20px; /* Add padding for better readability */
 }
 
 .blog-entry img {
